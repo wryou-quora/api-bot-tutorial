@@ -14,7 +14,7 @@ from langcatbot import LangCatBot
 from three_talkers import ThreeTalkers
 
 
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = ""
 
 # Echo bot is a very simple bot that just echoes back the user's last message.
 # bot = EchoBot()
