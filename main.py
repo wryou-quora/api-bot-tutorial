@@ -11,9 +11,13 @@ from catbot import CatBot
 from concurrent_battle import ConcurrentBattleBot
 from echobot import EchoBot
 from langcatbot import LangCatBot
+from three_talkers import ThreeTalkers
+
+
+OPENAI_API_KEY = "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"
 
 # Echo bot is a very simple bot that just echoes back the user's last message.
-bot = EchoBot()
+# bot = EchoBot()
 
 # A sample bot that showcases the capabilities the protocol provides. Please see the
 # following link for the full set of available message commands:
@@ -23,7 +27,6 @@ bot = EchoBot()
 # A custom chatbot built on top of ChatGPT and LangChain.
 # Add your OpenAI key here, e.g. sk-1234
 # You can obtain a key at https://platform.openai.com/account/api-keys
-# OPEN_AI_API_KEY = ""
 # bot = LangCatBot(OPEN_AI_API_KEY)
 
 # A bot that wraps Poe's Sage bot, but makes all messages ALL CAPS.
@@ -41,4 +44,5 @@ bot = EchoBot()
 # POE_API_KEY = ""
 # app = make_app(bot, api_key=POE_API_KEY)
 
+bot = ThreeTalkers(openai_api_key=OPENAI_API_KEY)
 app = make_app(bot, allow_without_key=True)
